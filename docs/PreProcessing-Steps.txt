@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%% Pre-Processing Steps %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1. Generate vertex IDs. For this run the script ManipulateRDF/scr/generateRDFSub-2-VID-Mapping.sh
+   Go to folder, ManipulateRDF/scr/ then run ./generateRDFSub-2-VID-Mapping.sh
+   this will create some files in the folder LOD_HOME/<dp-name>/vertex_mapping
+   content inside these files should look like following:
+
+
+2. Go to folder, ManipulateRDF/scr/ and run the script ./CalculateScore.sh <data-package-name> <BLS>
+   This program does many things, but only one of the output of this job is used by subsequent steps
+   Which is 10th map-reduce job, in 3rd step. For details see the shell script of next step.
+   
+3. Sort the data for lucene index creation
+   Go to folder, ManipulateRDF/scr/ and run the script ./AllSubsTogether.sh <data-package-name>
+   this will create some files in the folder LOD_HOME/<dp-name>/cleanData
+
+4. As suggested above, always keep local file system and HDFS in sync
+   next, rename all the files part-xx of the folder LOD_HOME/<dp-name>/cleanData to have extension (suffix) .nt
+
+5. Go to folder RDFSearch/scr
+   run the script ./index.sh <data-package-name>
+   this will create the lucene index in the folder - LOD_HOME/<dp-name>/index
+
+6. Now create the edge list in following format. In this file, the first term and second term, separated by space are the vertex-IDs of various entities. The third term indicates the direction of the edge, and the fourth term separated by tab is the edge weight.
+
+===============================
+0.10083 1.6744 BKD	1.0
+0.101 0.13123 BKD	2.0
+0.10137 13.6756 BKD	1.0
+0.10199 11.3395 BKD	1.0
+===============================
+1.6744 0.10083 FWD	1.0
+0.13123 0.101 FWD	2.0
+13.6756 0.10137 FWD	1.0
+11.3395 0.10199 FWD	1.0
+===============================
+
+Its very important to upload these files in the HDFS, (again the best approach is the keep the two file systems in sync)
+
+The above files should be kept in following folder LOD_HOME/<dp-name>/GiraphInput
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

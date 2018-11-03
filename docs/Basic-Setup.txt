@@ -1,0 +1,26 @@
+%%%%%%%%%%%%%%%%%%%%%%% BASIC Set Up %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+You need to set-up two folders for DKS to work
+
+1. LOD_HOME on Local computer / edge computer which will be used for issueing the command to run
+
+2. LOD_HOME on the HDFS (Hadooop Distributed File System). These two are different file-systems.
+
+3. In both file systems (Local file system, and on HDFS) perform all the above steps. As we run any step, its a good idea to keep the two file systems in sync. When running any Hadoop /Giraph job, it may create extra folders such as _SUCCESS or _logs. Its a good idea to keep removing all such folder as we proceed to next steps.
+
+
+4. create a folder for your data-package, e.g., sec-rdfabout in the folder LOD_HOME.
+   create folder LOD_HOME/<dp-name>/data
+   Copy your knowledge graph file(s) in this folder. 
+   this data should be in triple format with extension *.nt
+   There should be nothing else in this folder.
+
+5. create folder LOD_HOME/<dp-name>/vertex_mapping
+   create folder LOD_HOME/<dp-name>/logs
+   create folder LOD_HOME/<dp-name>/GiraphInput
+   create folder LOD_HOME/<dp-name>/Queries
+   create folder LOD_HOME/<dp-name>/Scoring
+   create folder LOD_HOME/<dp-name>/cleanData
+   create folder LOD_HOME/<dp-name>/index
+
+6. All the steps below take long time to run, depending on the size the data and the hadoop cluster.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

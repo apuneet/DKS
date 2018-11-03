@@ -1,0 +1,18 @@
+%%%%%%%%%%%%%%%%%%%%% Environment Variables required  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#Here B will indicate compile and build .jar file every time., R will indicate only run donot compile.
+DEPLOY_MODE=B 
+
+#LOD Home in the local machine.
+LOD_HOME_LOC=/data/LOD_HOME/
+
+#LOD Home in the HDFS, Check this path from HDFS browse interface.
+LOD_HOME_SVR=/user/pa113939/LOD_ALL/
+
+#Folder where you checked out this code.
+Workspace_Home=/home/puneet/WinD/Workspaces/MyNewResearch/graph-search
+
+#This 1 should be used if Hadoop is being used in Pseudo distributed mode or in distributed mode, otherwise use 0
+isHadoopServer=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

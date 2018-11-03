@@ -1,0 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%% RUN DKS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+First time run with DEPLOY_MODE=B, and after that always run in DEPLOY_MODE=R
+
+Go to folder MyPregel/scr/
+run the scipt Pregel_DKS.sh, first run it without arguments, it will show help text.
+
+The 100 queries used in the paper have been saved in following sell scripts
+
+1) bluk-bnb		- 	F-bluk-bnb-100-1.sh
+2) sec-rdfabout		-	F-sec-100-1.sh
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

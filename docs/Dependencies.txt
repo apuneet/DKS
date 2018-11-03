@@ -1,0 +1,5 @@
+%%%%%%%%%%%%%%%%%%%%%% DEPENDENCIES %%%%%%%%%%%%%%%%%%%%%%%%
+You need to have Java 6/7 installed
+It works only on linux
+It uses Hadoop 1.0.0 and Giraph binaries are already available in folder graph-search/MyPregel/build/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
